@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: nodeapp
-      image: devopsmptech/myapp:2.0.12
+      image: sstechnosolutions/myapp:v0
       imagePullPolicy: Always
       ports:
         - containerPort: 8080

@@ -3,7 +3,7 @@
 ### Create pod by using command
 
 ```
-$ kubectl run myapp --image=devopsmptech/myapp:2.0.12 --port=8080
+$ kubectl run myapp --image=sstechnosolutions/myapp:v0 --port=8080
 ```
 
 ## Creating a Pod
@@ -19,7 +19,7 @@ metadata:
 spec:
   containers:
     - name: myapp
-      image: devopsmptech/myapp:2.0.12
+      image: sstechnosolutions/myapp:v0
       imagePullPolicy: Always
       ports:
         - containerPort: 8080

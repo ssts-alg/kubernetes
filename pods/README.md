@@ -3,7 +3,7 @@
 ### Create pod by using command
 
 ```
-kubectl run myapp --image=devopsmptech/myapp:0.0.0 --port=80
+$ kubectl run myapp --image=devopsmptech/myapp:2.0.12 --port=8080
 ```
 
 ## Creating a Pod
@@ -19,7 +19,8 @@ metadata:
 spec:
   containers:
     - name: myapp
-      image: devopsmptech/myapp:0.0.0
+      image: devopsmptech/myapp:2.0.12
+      imagePullPolicy: Always
       ports:
         - containerPort: 8080
 ```
@@ -44,6 +45,7 @@ $ kubectl describe pods/myapp
 **Syntax** - kubectl exec POD_NAME CMD_TO_EXECUTE
 ```
 $ kubectl exec myapp printenv
+$ kubectl exec myapp ls
 ```
 ### Getting into pods Terminal
 **Syntax** - kubectl exec -it POD_NAME bash

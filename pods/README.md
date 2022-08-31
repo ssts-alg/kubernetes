@@ -12,7 +12,7 @@ metadata:
 spec:
   containers:
     - name: myapp
-      image: devopsmptech/myapp:v1
+      image: devopsmptech/myapp:0.0.0
       ports:
         - containerPort: 8080
 ```

@@ -1,4 +1,11 @@
 # Kubernetes Pods - Commands
+
+### Create pod by using command
+
+```
+kubectl run  apache --image=devopsmptech/myapp:0.0.0 --port=80
+```
+
 ## Creating a Pod
 ### Create pod.yml with following content
 Get the file [(pod.yml)](https://github.com/ssts-alg/kubernetes/blob/master/pods/pods.yml)

@@ -3,7 +3,7 @@
 ### Create pod by using command
 
 ```
-kubectl run  apache --image=devopsmptech/myapp:0.0.0 --port=80
+kubectl run myapp --image=devopsmptech/myapp:0.0.0 --port=80
 ```
 
 ## Creating a Pod

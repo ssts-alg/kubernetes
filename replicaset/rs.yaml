@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp
+spec:
+  replicas: 5
+  selector:
+    matchExpressions:
+      - {key: app, operator: In, values: [myapp]}
+  template:
+    metadata:
+      name: myapp
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: sstechnosolutions/myapp:v0
+        ports:
+        - containerPort: 8080

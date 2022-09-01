@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eksdemo-live
+  name: eksdemo-live1
   region: us-west-2
 iam:
   withOIDC: true
@@ -13,7 +13,7 @@ vpc:
       us-east-1b: { id: subnet-08ed0df573ccb4b1d }
       us-east-1c: { id: subnet-0075bf41175a2cbb1 }
 managedNodeGroups:
-  - name: eksdemo-live
+  - name: eksdemo-live1
     amiFamily: AmazonLinux2
     subnets:
       - subnet-0a6d9204c9ed93dc4

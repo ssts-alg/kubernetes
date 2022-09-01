@@ -1,12 +1,12 @@
 ## To create cluster
 ```
-eksctl create cluster -f create-cluster.yaml
+eksctl create cluster -f eksctl/create-cluster/create-cluster-west-2.yaml
 
 ```
 
 ## To Delete Cluster
 ```
-eksctl delete cluster -f create-cluster.yaml
+eksctl delete cluster -f eksctl/create-cluster/create-cluster-west-2.yaml
 
 ```
 ## To generate cluster template

@@ -5,11 +5,11 @@
 `kubectl create -f namespaces/ns.yaml`
 
 ### Get all namespaces
-`kubectl get namespaces`
+`kubectl get namespaces/ns`
 
 ### Deleting a namespace
 `kubectl delete namespaces dev`
 
 
-### To set default namespace
+### To set switch/default namespace
 `kubectl config set-context --current --namespace=dev`

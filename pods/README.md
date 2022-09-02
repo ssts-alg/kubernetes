@@ -31,7 +31,7 @@ $ kubectl create -f https://raw.githubusercontent.com/ssts-alg/kubernetes/master
 ### Command to get all pods
 
 ```
-$ kubectl get pods
+$ kubectl get pods/po
 ```
 
 ### Command to describe pod details
@@ -57,8 +57,16 @@ $ kubectl exec -it myapp bash
 ```
 $ kubectl logs myapp
 ```
-## Exposing Pods to Internet
+#####  Exposing Pods to Internet
 By default Pods run in a isolated environment i.e. they are reachable within kubernetes cluster, if you wanna reach your pod outside cluster, You have to expose it
 ```
 $ kubectl expose pods/myapp --type="NodePort" --port 8080
 ```
+
+
+
+
+
+
+
+export KUBECONFIG=~/.kube/config:/Users/admin/Desktop/dev_config

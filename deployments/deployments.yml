@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: myapp
 spec:
-  replicas: 3
+  replicas: 4
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -18,7 +18,7 @@ spec:
         app: myapp
     spec:
       containers:
-      - image: sstechnosolutions/myapp:v5
+      - image: sstechnosolutions/myapp:v0
         imagePullPolicy: Always
         name: myapp
         ports:

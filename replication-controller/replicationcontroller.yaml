@@ -15,6 +15,5 @@ spec:
       containers:
       - name: myapp
         image: sstechnosolutions/myapp:v0
-        imagePullPolicy: Always
         ports:
         - containerPort: 8080

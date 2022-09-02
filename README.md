@@ -37,3 +37,19 @@ spec:
       topology.kubernetes.io/zone: us-west-2a
 
 ```
+
+
+#### delete all pods at the same time
+
+`kubectl delete pod --all`
+
+#### To export config
+`export KUBECONFIG=~/.kube/config:/Users/admin/Desktop/dev_config`
+
+
+#### Get Current namespace
+
+```
+kubectl config view | grep namespace
+kubectl config view --minify -o jsonpath='{..namespace}' | xargs
+```

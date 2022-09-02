@@ -17,6 +17,11 @@
 #### Get labels of nodes
 `kubectl get nodes --show-labels`
 
+
+
+#### Get labels of pods
+`kubectl get pods --show-labels`
+
 #### To Run pod in perticular node
 
 ```

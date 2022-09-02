@@ -44,11 +44,11 @@ spec:
 ```
 
 
-#### delete all pods at the same time
+#### To delete pods all at once
 
 `kubectl delete pod --all`
 
-#### To export config
+#### To export config or To use different config
 `export KUBECONFIG=~/.kube/config:/Users/admin/Desktop/dev_config`
 
 

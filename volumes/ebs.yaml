@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ebs-pod
+spec:
+  containers:
+  - image: sstechnosolutions/myapp:v0
+    name: myapp
+    volumeMounts:
+    - mountPath: /test-ebs
+      name: test-volume
+  volumes:
+  - name: test-volume
+    # This AWS EBS volume must already exist.
+    awsElasticBlockStore:
+      volumeID: vol-hfjhyfyfyjfkuf
+      fsType: ext4
+  nodeSelector:
+      topology.kubernetes.io/zone: us-west-2b

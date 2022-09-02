@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: configmap-pod
+spec:
+  containers:
+  - name: myapp
+    image: sstechnosolutions/myapp:v0
+    command: [ "/bin/sh", "-c", "ls /etc/dev-mount" ]
+    volumeMounts:
+    - name: dev-mount
+      mountPath: "/etc/dev-mount"
+      readOnly: true
+  volumes:
+  - name: dev-mount
+    configMap:
+      name: dev-server

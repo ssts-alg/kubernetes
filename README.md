@@ -6,7 +6,7 @@
 5. Services
 6. ConfigMap
 7. Namespaces
-8. HPA
+8. HPA(Horizontal Pod Autoscaler)
 9. Volumes
 10. Secrets
 11. Probes

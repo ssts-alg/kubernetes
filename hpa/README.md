@@ -23,6 +23,7 @@ Create a php-apache deployment and a service
 1.    To create a php-apache deployment, run the following command:
 
 `kubectl create deployment php-apache --image=k8s.gcr.io/hpa-example`
+
 2.    To set the CPU requests, run the following command:
 
 `kubectl patch deployment php-apache -p='{"spec":{"template":{"spec":{"containers":[{"name":"hpa-example","resources":{"requests":{"cpu":"200m"}}}]}}}}'`
@@ -43,7 +44,7 @@ Create a php-apache deployment and a service
 
 6.    To create a pod to connect to the deployment that you created earlier, run the following command:
 
-`kubectl run --generator=run-pod/v1 -i --tty load-generator --image=busybox /bin/sh`
+`kubectl run -i --tty load-generator --image=busybox /bin/sh`
 
 7.    To test a load on the pod in the namespace that you used in step 1, run the following script:
 
@@ -63,4 +64,6 @@ kubectl delete hpa,service,deployment php-apache
 kubectl delete pod load-generator
 ```
 
-***Reference:*** https://aws.amazon.com/premiumsupport/knowledge-center/eks-metrics-server-pod-autoscaler/
+***Reference:***
+1. https://aws.amazon.com/premiumsupport/knowledge-center/eks-metrics-server-pod-autoscaler/
+2. https://docs.aws.amazon.com/eks/latest/userguide/horizontal-pod-autoscaler.html

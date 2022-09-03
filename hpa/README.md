@@ -2,7 +2,7 @@
 
 The Kubernetes Horizontal Pod Autoscaler automatically scales the number of pods in a deployment, replication controller, or replica set based on that resource's CPU utilization. This can help your applications scale out to meet increased demand or scale in when resources are not needed, thus freeing up your nodes for other applications. When you set a target CPU utilization percentage, the Horizontal Pod Autoscaler scales your application in or out to try to meet that target.
 
-###### How do I set up Kubernetes Metrics Server and Horizontal Pod Autoscaler on Amazon EKS?
+##### How do I set up Kubernetes Metrics Server and Horizontal Pod Autoscaler on Amazon EKS?
 Create a Kubernetes Metrics Server
 
 1.    To install Metrics Server, run the following command:
@@ -62,3 +62,5 @@ The Metrics Server is now up and running, and you can use it to get resource-bas
 kubectl delete hpa,service,deployment php-apache
 kubectl delete pod load-generator
 ```
+
+***Reference:*** https://aws.amazon.com/premiumsupport/knowledge-center/eks-metrics-server-pod-autoscaler/

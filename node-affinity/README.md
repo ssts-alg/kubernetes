@@ -1,6 +1,5 @@
 ####
 Node affinity is a set of rules used by the scheduler to determine where a pod can be placed. The rules are defined using custom labels on nodes and label selectors specified in pods. Node affinity allows a pod to specify an affinity (or anti-affinity) towards a group of nodes it can be placed on.
-https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/
 
 
 ##### Add a label to a node
@@ -40,7 +39,7 @@ In the preceding output, you can see that the worker0 node has a disktype=ssd la
 ### Schedule a Pod using required node affinity
 
 This manifest describes a Pod that has a requiredDuringSchedulingIgnoredDuringExecution node affinity,disktype: ssd. This means that the pod will get scheduled only on a node that has a disktype=ssd label.
-pods/pod-nginx-required-affinity.yaml [Copy pods/pod-nginx-required-affinity.yaml to clipboard]
+pods/pod-nginx-required-affinity.yaml
 
 ```
 apiVersion: v1
@@ -78,7 +77,7 @@ nginx    1/1       Running   0          13s    10.200.0.4   worker0
 ### Schedule a Pod using preferred node affinity
 
 This manifest describes a Pod that has a preferredDuringSchedulingIgnoredDuringExecution node affinity,disktype: ssd. This means that the pod will prefer a node that has a disktype=ssd label.
-pods/pod-nginx-preferred-affinity.yaml [Copy pods/pod-nginx-preferred-affinity.yaml to clipboard]
+pods/pod-nginx-preferred-affinity.yaml
 
 ```
 apiVersion: v1
@@ -114,3 +113,5 @@ The output is similar to this:
 NAME     READY     STATUS    RESTARTS   AGE    IP           NODE
 nginx    1/1       Running   0          13s    10.200.0.4   worker0
 ```
+
+***Reference:*** https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/

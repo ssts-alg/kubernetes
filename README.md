@@ -1,3 +1,18 @@
+## Table of Contents:
+1. Pods                 
+2. ReplicaSet
+3. ReplicationController
+4. Deployments
+5. Services
+6. ConfigMap
+7. Namespaces
+8. HPA
+9. Volumes
+10. Secrets
+11. Probes
+12. NodeAffinity
+13. EKSCTL(Cluster Creation)
+
 # General Commands
 
 ## kubectl Cheat Sheet

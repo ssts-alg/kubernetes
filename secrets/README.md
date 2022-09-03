@@ -6,7 +6,7 @@
 #### Create kubernetes secrets using command line
 
 ```
-kubectl create secret docker-registry docker-creds --docker-server=https://index.docker.io/v1/ --docker-username=kammana --docker-password=<your-password> --docker-email=sstechnosolutions3@gmail.com
+kubectl create secret docker-registry docker-creds --docker-server=https://index.docker.io/v1/ --docker-username=sstechnosolutions --docker-password=<your-password> --docker-email=sstechnosolutions3@gmail.com
 ```
 #### Create ssecrets using config.json
 
@@ -48,6 +48,17 @@ kubectl create -f https://raw.githubusercontent.com/sstechnosolutions/kubernetes
 kubectl create secret docker-registry --dry-run=client docker-creds \
   --docker-server=https://index.docker.io/v1/ \
   --docker-username=sstechnosolutions \
-  --docker-password=admin0987@ \
+  --docker-password=admin12345 \
   --docker-email=sstechnosolutions3@gmail.com -o yaml > docker-secret.yaml
 ```
+
+## Examples
+
+#### Create a new secret named my-secret with keys for each file in folder bar
+  `kubectl create secret generic my-secret --from-file=path/to/bar`
+
+#### Create a new secret named my-secret with specified keys instead of names on disk
+  `kubectl create secret generic my-secret --from-file=ssh-privatekey=~/.ssh/id_rsa --from-file=ssh-publickey=~/.ssh/id_rsa.pub`
+
+#### Create a new secret named my-secret with key1=supersecret and key2=topsecret
+  `kubectl create secret generic my-secret --from-literal=key1=supersecret --from-literal=key2=topsecret`

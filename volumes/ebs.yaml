@@ -13,7 +13,7 @@ spec:
   - name: test-volume
     # This AWS EBS volume must already exist.
     awsElasticBlockStore:
-      volumeID: vol-hfjhyfyfyjfkuf
+      volumeID: vol-04454c03658c6b060
       fsType: ext4
   nodeSelector:
       topology.kubernetes.io/zone: us-west-2b

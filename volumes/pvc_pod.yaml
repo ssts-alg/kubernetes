@@ -4,10 +4,10 @@ metadata:
   name: mypod
 spec:
   containers:
-    - name: myfrontend
-      image: httpd
+    - name: myapp
+      image: sstechnosolutions/myapp:v0
       volumeMounts:
-      - mountPath: "/var/www/html"
+      - mountPath: "/temp"
         name: mypd
   volumes:
     - name: mypd

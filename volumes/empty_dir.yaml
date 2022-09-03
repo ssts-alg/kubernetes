@@ -4,11 +4,11 @@ metadata:
   name: emptydir-pod
 spec:
   containers:
-  - name: redis
-    image: redis
+  - name: myapp
+    image: sstechnosolutions/myapp:v0
     volumeMounts:
-    - name: redis-storage
-      mountPath: /data/redis
+    - name: myapp-storage
+      mountPath: /home/ec2-user
   volumes:
-  - name: redis-storage
+  - name: myapp-storage
     emptyDir: {}

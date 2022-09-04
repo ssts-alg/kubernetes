@@ -7,6 +7,7 @@ In Linux/Mac/JenkinsLinux:
   1. Download from [Link](https://github.com/helm/helm/releases)
   2. `tar -zxvf helm-v3.0.0-linux-amd64.tar.gz`
   3. `mv linux-amd64/helm /usr/local/bin/helm`
+***Reference:*** https://helm.sh/docs/intro/install/
 
 #### To Generate Skelton for Helm Cart:
 
@@ -34,7 +35,7 @@ Modify values according to your requirement.
 #### To to delete app in helm:
 `helm delete myapp`
 
-## Pusing Helm charts to AWS ECR(Elastic Container Registry)
+## Pushing Helm charts to AWS ECR (Elastic Container Registry):
 
 1. `aws ecr create-repository --repository-name myapp --region us-west-2`
 2. `aws ecr get-login-password --region us-west-2 | helm registry login --username AWS --password-stdin 1234567890.dkr.ecr.us-west-2.amazonaws.com`.
@@ -51,4 +52,4 @@ Modify values according to your requirement.
 2. `helm install myapp oci://1234567890.dkr.ecr.us-west-2.amazonaws.com/myapp --version 0.0.0`
 3. To list `helm list -n default`
 4. **Optional:**`kubectl describe configmap helm-test-chart-configmap`
-5. To uninstall helm chart `helm uninstall ecr-chart-demo`.
+5. To uninstall helm chart `helm uninstall myapp`.

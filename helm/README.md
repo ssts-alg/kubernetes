@@ -3,11 +3,13 @@
 ## Installing Helm:
 
 In mac os `brew install helm`
+
 In Linux/Mac/JenkinsLinux:
   1. Download from [Link](https://github.com/helm/helm/releases)
   2. `tar -zxvf helm-v3.0.0-linux-amd64.tar.gz`
   3. `mv linux-amd64/helm /usr/local/bin/helm`
 ***Reference:*** https://helm.sh/docs/intro/install/
+***Note:*** If you want to install helm in Windows Download from [Link](https://github.com/helm/helm/releases) and set path in environment variables.
 
 ### HELM Commands:
 

@@ -73,3 +73,7 @@ spec:
 kubectl config view | grep namespace
 kubectl config view --minify -o jsonpath='{..namespace}' | xargs
 ```
+
+#### Taints and Tolerations:
+
+Node affinity is a property of Pods that attracts them to a set of nodes (either as a preference or a hard requirement). Taints are the opposite -- they allow a node to repel a set of pods. Tolerations are applied to pods. Tolerations allow the scheduler to schedule pods with matching taints.

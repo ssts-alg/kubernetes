@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: demo-ebs
+  name: jenkins-ebs-volume
 spec:
   accessModes:
     - ReadWriteOnce

@@ -13,7 +13,7 @@ In Linux/Mac/JenkinsLinux:
 
 ***Note:*** If you want to install helm in Windows Download from [Link](https://github.com/helm/helm/releases) and set path in environment variables.
 
-### HELM Commands:
+## HELM Commands:
 
 #### To Generate Skelton for Helm Cart:
 

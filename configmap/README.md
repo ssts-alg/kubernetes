@@ -17,6 +17,7 @@ A ConfigMap allows you to decouple environment-specific configuration from your 
 
 ### To validate
 `kubectl exec -it myapp bash`
+
 `cd /etc/dev-mount`
 
 from here you can able to find the values
